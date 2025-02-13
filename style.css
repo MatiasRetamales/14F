@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #860202;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #e91e63;
+  font-size: 2em;
+  top: 90px;
+}
+
+.heart-container {
+  position: relative;
+  right: 40px;
+  bottom: 90px;
+}
+
+.heart {
+  position: absolute;
+  width: 50px; /* Ajusta el tamaño de la imagen */
+  height: 50px; /* Ajusta el tamaño de la imagen */
+  background-image: url("corazon.png"); /* Coloca la ruta de tu imagen */
+  background-size: cover;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para los párrafos con animación */
+.love-letter {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(30) forwards;
+  animation-timing-function: steps(30, end);
+  display: block;
+}
+
+/* Aplica un retraso progresivo a cada párrafo */
+.love-letter:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.love-letter:nth-of-type(2) {
+  animation-delay: 4s;
+}
+.love-letter:nth-of-type(3) {
+  animation-delay: 8s;
+}
+.love-letter:nth-of-type(4) {
+  animation-delay: 12s;
+}
+.love-letter:nth-of-type(5) {
+  animation-delay: 16s;
+}
+.love-letter:nth-of-type(6) {
+  animation-delay: 20s;
+}
+.love-letter:nth-of-type(7) {
+  animation-delay: 24s;
+}
+.love-letter:nth-of-type(8) {
+  animation-delay: 28s;
+}
+
+/* Animación de tipeo */
+@keyframes typing {
+  100% {
+    width: 100%;
+  }
+}
+
+/* Animación de tipeo */
+@keyframes typing {
+  100% {
+    width: 100%;
+  }
+}
+
+button {
+  margin-top: 20px;
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+/* Corazón */
+.corazon {
+  width: 100px;
+  height: 100px;
+  background-image: url("corazon.png"); /* Cambia la URL a la de tu imagen de corazón */
+  background-size: cover;
+  position: absolute;
+  animation: heart-appear 1s ease-out forwards,
+    heart-disappear 2s ease-out forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animación para hacer que el corazón aparezca */
+@keyframes heart-appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animación para hacer que el corazón desaparezca */
+@keyframes heart-disappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em; /* Reducir tamaño del texto en dispositivos pequeños */
+  }
+
+  .container {
+    padding: 20px; /* Reducir el padding en pantallas pequeñas */
+    width: 90%; /* Hacer el contenedor más pequeño en pantallas pequeñas */
+  }
+
+  button {
+    font-size: 1.2em; /* Aumentar el tamaño del botón */
+    padding: 15px 30px; /* Ajustar el padding del botón */
+  }
+
+  .love-letter {
+    font-size: 1em; /* Reducir el tamaño del texto de la carta de amor */
+  }
+
+  .heart {
+    width: 70px; /* Reducir el tamaño del corazón */
+    height: 70px; /* Reducir el tamaño del corazón */
+  }
+}
